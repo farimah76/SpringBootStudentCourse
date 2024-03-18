@@ -13,10 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/student")
 public class StudentController {
+    private static final Logger logger = LoggerFactory.getLogger(AnformaticApplication.class);
     @Autowired
     StudentService studentService;
 
-    private static final Logger logger = LoggerFactory.getLogger(AnformaticApplication.class);
 
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
@@ -37,12 +37,12 @@ public class StudentController {
         return studentService.createStudent(name,userName);
     }
 
-    @GetMapping("email")
+    @GetMapping("/email")
     public Student findStudentByEmail(@PathVariable String email) throws Exception {
         return studentService.findByEmail(email);
     }
 
-    @GetMapping("/student/{studentid}")
+    @GetMapping("{studentid}")
     private Student getStudentById(@PathVariable("studentid") Long studentId) {
 
         logger.info("getting studentId");
@@ -50,7 +50,7 @@ public class StudentController {
     }
 
     @PostMapping("/saveStudent")
-    private Long saveBook(@RequestBody Student student) throws Exception {
+    private Long saveStudent(@RequestBody Student student) throws Exception {
         logger.info("save students");
         studentService.saveStudent(student);
         return student.getId();

@@ -37,17 +37,4 @@ public class Course {
     @ManyToMany(fetch = FetchType.LAZY)
     private Set<Student> studentId=new HashSet<>();
 
-    public Course(Long id, @NonNull short unit, @NonNull String title) {
-        this.id = id;
-        this.unit = unit;
-        this.title = title;
-    }
-
-    public Course(Long id, @NonNull short unit, @NonNull String title, Master master) {
-        this.id = id;
-        this.unit = unit;
-        this.title = title;
-        this.master = master;
-    }
-
 }

@@ -16,9 +16,11 @@ public class CourseAssignmentService {
      CourseService courseService;
 
     public void assignmentCourseTo(Long studentId,Long courseId){
-        Student student=studentService.getStudentById(studentId);
-        Course course=courseService.getCourseById(courseId);
+        Student student=new Student();
+        Course course=new Course();
         if (student!=null && course!=null){
+            student.setId(studentId);
+            course.setId(courseId);
             student.getCourses().add(course);
             studentRepository.save(student);
         }

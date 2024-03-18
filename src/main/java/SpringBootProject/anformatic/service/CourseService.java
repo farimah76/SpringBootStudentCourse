@@ -37,6 +37,12 @@ public class CourseService {
         this.masterRepository = masterRepository;
     }
 
+    public CourseService(MasterService masterService, CourseService courseService) {
+        this.masterService = masterService;
+        this.courseService = courseService;
+
+    }
+
     @Autowired
     public CourseService(CourseRepository courseRepository, StudentRepository studentRepository) {
         this.courseRepository = courseRepository;
@@ -44,14 +50,14 @@ public class CourseService {
     }
 
     public Course createCourse(String name,Long courseId,Long masterId){
-        Master master=masterService.getMasterById(masterId);
-        Course course=courseService.getCourseById(courseId);
+        Master master=new Master();
+        Course course=new Course();
         if(master!=null){
             course.setTitle(name);
             course.setId(courseId);
             master.setId(masterId);
             course.setMaster(master);
-            return courseRepository.save(course);
+            return courseRepository.save(course) ;
         }
         return null;
     }
