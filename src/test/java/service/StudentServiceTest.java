@@ -1,8 +1,6 @@
 package service;
 
-import aSpringBootProject.anformatic.repository.CourseRepository;
 //import org.junit.Before;
-import org.junit.Before;
 import org.junit.jupiter.api.*;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -10,11 +8,12 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import aSpringBootProject.anformatic.AnformaticApplication;
-import aSpringBootProject.anformatic.model.Student;
-import aSpringBootProject.anformatic.repository.StudentRepository;
-import aSpringBootProject.anformatic.service.StudentService;
-import org.springframework.boot.test.context.SpringBootTest;
+import SpringBootProject.anformatic.AnformaticApplication;
+import SpringBootProject.anformatic.model.Student;
+import SpringBootProject.anformatic.repository.StudentRepository;
+import SpringBootProject.anformatic.service.StudentService;
+
+        import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
 
@@ -31,7 +30,6 @@ public class StudentServiceTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    private Student student;
 
     @Test
     public void testCreateStudent() throws Exception {
@@ -48,6 +46,19 @@ public class StudentServiceTest {
         Assertions.assertEquals(studentUserName, createStudent.getUserName());
         Mockito.verify(studentRepository, Mockito.times(1)).save(Mockito.any());
         Mockito.verifyNoMoreInteractions(studentRepository);
+        logger.info("TestCreateStudent passed.");
     }
-
+    @Test
+    public void testGetCourseById(){
+        Long studentId=1L;
+        String name="reza rezaee";
+        Student student=new Student();
+        student.setId(studentId);
+        student.setName(name);
+        Mockito.when(studentRepository.findById(studentId)).thenReturn(Optional.of(student));
+        Student retrieveStudent =studentService.getStudentById(studentId);
+        Assertions.assertEquals(studentId, retrieveStudent.getId());
+        Assertions.assertEquals(name, retrieveStudent.getName());
+        logger.info("TestGetCourseById passed.");
+    }
 }

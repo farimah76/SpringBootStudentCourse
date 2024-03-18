@@ -78,7 +78,7 @@
 2024-03-17T10:14:57.044+03:30 DEBUG 10316 --- [anformatic] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-03-17T10:14:57.046+03:30  INFO 10316 --- [anformatic] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 2024-03-17T10:14:58.388+03:30 DEBUG 10316 --- [anformatic] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/student/welcome", parameters={}
-2024-03-17T10:14:58.388+03:30 DEBUG 10316 --- [anformatic] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to aSpringBootProject.anformatic.controller.StudentController#index()
+2024-03-17T10:14:58.388+03:30 DEBUG 10316 --- [anformatic] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to controller.SpringBootProject.anformatic.StudentController#index()
 2024-03-17T10:14:58.404+03:30 DEBUG 10316 --- [anformatic] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, application/json, application/*+json]
 2024-03-17T10:14:58.404+03:30 DEBUG 10316 --- [anformatic] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing ["/pages/welcome.html"]
 2024-03-17T10:14:58.404+03:30 DEBUG 10316 --- [anformatic] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
@@ -120,7 +120,7 @@
 2024-03-17T10:18:29.986+03:30 DEBUG 6092 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-03-17T10:18:29.987+03:30  INFO 6092 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2024-03-17T10:18:31.571+03:30 DEBUG 6092 --- [anformatic] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/student/welcome", parameters={}
-2024-03-17T10:18:31.572+03:30 DEBUG 6092 --- [anformatic] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to aSpringBootProject.anformatic.controller.StudentController#index()
+2024-03-17T10:18:31.572+03:30 DEBUG 6092 --- [anformatic] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to controller.SpringBootProject.anformatic.StudentController#index()
 2024-03-17T10:18:31.584+03:30 DEBUG 6092 --- [anformatic] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, application/json, application/*+json]
 2024-03-17T10:18:31.585+03:30 DEBUG 6092 --- [anformatic] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["/pages/welcome"]
 2024-03-17T10:18:31.586+03:30 DEBUG 6092 --- [anformatic] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
@@ -162,7 +162,7 @@
 2024-03-17T10:32:52.846+03:30 DEBUG 3296 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-03-17T10:32:52.846+03:30  INFO 3296 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2024-03-17T10:32:54.432+03:30 DEBUG 3296 --- [anformatic] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/student/welcome", parameters={}
-2024-03-17T10:32:54.433+03:30 DEBUG 3296 --- [anformatic] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to aSpringBootProject.anformatic.controller.StudentController#index()
+2024-03-17T10:32:54.433+03:30 DEBUG 3296 --- [anformatic] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to controller.SpringBootProject.anformatic.StudentController#index()
 2024-03-17T10:32:54.446+03:30 DEBUG 3296 --- [anformatic] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, application/json, application/*+json]
 2024-03-17T10:32:54.446+03:30 DEBUG 3296 --- [anformatic] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing ["templates/pages/welcome.html"]
 2024-03-17T10:32:54.448+03:30 DEBUG 3296 --- [anformatic] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
@@ -204,7 +204,7 @@
 2024-03-17T10:33:34.552+03:30 DEBUG 13908 --- [anformatic] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-03-17T10:33:34.552+03:30  INFO 13908 --- [anformatic] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2024-03-17T10:33:35.820+03:30 DEBUG 13908 --- [anformatic] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/student/welcome", parameters={}
-2024-03-17T10:33:35.821+03:30 DEBUG 13908 --- [anformatic] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to aSpringBootProject.anformatic.controller.StudentController#index()
+2024-03-17T10:33:35.821+03:30 DEBUG 13908 --- [anformatic] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to controller.SpringBootProject.anformatic.StudentController#index()
 2024-03-17T10:33:35.832+03:30 DEBUG 13908 --- [anformatic] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, application/json, application/*+json]
 2024-03-17T10:33:35.832+03:30 DEBUG 13908 --- [anformatic] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing ["welcome to my pages"]
 2024-03-17T10:33:35.835+03:30 DEBUG 13908 --- [anformatic] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
@@ -262,7 +262,7 @@
 2024-03-17T10:34:37.675+03:30 DEBUG 11188 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-03-17T10:34:37.675+03:30  INFO 11188 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2024-03-17T10:34:39.156+03:30 DEBUG 11188 --- [anformatic] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/student/welcome", parameters={}
-2024-03-17T10:34:39.156+03:30 DEBUG 11188 --- [anformatic] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to aSpringBootProject.anformatic.controller.StudentController#index()
+2024-03-17T10:34:39.156+03:30 DEBUG 11188 --- [anformatic] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to controller.SpringBootProject.anformatic.StudentController#index()
 2024-03-17T10:34:39.172+03:30 DEBUG 11188 --- [anformatic] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, application/json, application/*+json]
 2024-03-17T10:34:39.172+03:30 DEBUG 11188 --- [anformatic] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing ["welcome to my pages"]
 2024-03-17T10:34:39.172+03:30 DEBUG 11188 --- [anformatic] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
@@ -311,7 +311,7 @@
 2024-03-17T10:36:42.365+03:30 DEBUG 8668 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-03-17T10:36:42.366+03:30  INFO 8668 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 2024-03-17T10:36:43.696+03:30 DEBUG 8668 --- [anformatic] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/student/welcome", parameters={}
-2024-03-17T10:36:43.696+03:30 DEBUG 8668 --- [anformatic] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to aSpringBootProject.anformatic.controller.StudentController#index()
+2024-03-17T10:36:43.696+03:30 DEBUG 8668 --- [anformatic] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to controller.SpringBootProject.anformatic.StudentController#index()
 2024-03-17T10:36:43.709+03:30 DEBUG 8668 --- [anformatic] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, application/json, application/*+json]
 2024-03-17T10:36:43.709+03:30 DEBUG 8668 --- [anformatic] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["welcome to my pages"]
 2024-03-17T10:36:43.712+03:30 DEBUG 8668 --- [anformatic] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
@@ -369,7 +369,7 @@
 2024-03-17T10:51:42.119+03:30 DEBUG 13060 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-03-17T10:51:42.119+03:30  INFO 13060 --- [anformatic] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2024-03-17T10:51:43.282+03:30 DEBUG 13060 --- [anformatic] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/student/welcome", parameters={}
-2024-03-17T10:51:43.282+03:30 DEBUG 13060 --- [anformatic] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to aSpringBootProject.anformatic.controller.StudentController#index()
+2024-03-17T10:51:43.282+03:30 DEBUG 13060 --- [anformatic] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to controller.SpringBootProject.anformatic.StudentController#index()
 2024-03-17T10:51:43.295+03:30 DEBUG 13060 --- [anformatic] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, application/json, application/*+json]
 2024-03-17T10:51:43.295+03:30 DEBUG 13060 --- [anformatic] [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["/pages/welcome"]
 2024-03-17T10:51:43.297+03:30 DEBUG 13060 --- [anformatic] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

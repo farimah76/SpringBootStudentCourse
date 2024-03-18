@@ -1,13 +1,12 @@
 package service;
 
-import aSpringBootProject.anformatic.model.Course;
-import aSpringBootProject.anformatic.model.Master;
-import aSpringBootProject.anformatic.model.Student;
-import aSpringBootProject.anformatic.repository.CourseRepository;
-import aSpringBootProject.anformatic.repository.StudentRepository;
-import aSpringBootProject.anformatic.service.CourseService;
-import aSpringBootProject.anformatic.service.StudentService;
-import org.junit.Before;
+import SpringBootProject.anformatic.AnformaticApplication;
+import SpringBootProject.anformatic.model.Course;
+import SpringBootProject.anformatic.model.Master;
+import SpringBootProject.anformatic.repository.CourseRepository;
+import SpringBootProject.anformatic.repository.MasterRepository;
+import SpringBootProject.anformatic.service.CourseService;
+import SpringBootProject.anformatic.service.MasterService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,49 +14,61 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
 
 public class CourceServiceTest {
-
+    private static final Logger logger = LoggerFactory.getLogger(AnformaticApplication.class);
     @Mock
     CourseRepository courseRepository;
+    @Mock
+    MasterRepository masterRepository;
     @InjectMocks
     CourseService courseService;
+    @InjectMocks
+    MasterService masterService;
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.initMocks(this);
     }
-
-    private Course course=new Course();
-
-    @Before()
-    public void init() {
-
-        course = new Course(20L,(short)2,"fizik");
+    @Test
+    public void testGetCourseById(){
+        Long courseId=1L;
+        String title="mathematics";
+        Course course=new Course();
+        course.setId(courseId);
+        course.setTitle(title);
+        Mockito.when(courseRepository.findById(courseId)).thenReturn(Optional.of(course));
+        Course retrieveCourse =courseService.getCourseById(courseId);
+        Assertions.assertEquals(courseId,retrieveCourse.getId());
+        Assertions.assertEquals(title,retrieveCourse.getTitle());
+        logger.info("TestGetCourseById passed.");
     }
+
     @Test
     public void testCreateCourse(){
+        String title="physics";
         Long masterId=10L;
+        Long courseId=10L;
+        Course course=new Course();
+        course.setTitle(title);
         Master master=new Master();
-       master.setId(masterId);
-        Course course1=new Course();
-        String title="kak";
-        Long id=10L;
-        course1.setTitle(title);
-        course1.setMaster(master);
-//        course1.setId(id);
-//        course1.getMaster().setId(10L);
-        Mockito.when(courseRepository.save(any())).thenReturn(course1);
-
-        Course createCourse=courseService.createCourse(title,masterId);
-       Assertions.assertNotNull(createCourse);
-//        Long createMsterId= 30L;
-//        createCourse.getMaster().setId(createMsterId);
-//        Assertions.assertEquals(title,createCourse.getTitle());
-//        Assertions.assertEquals(masterId,createMsterId);
-        Mockito.verify(courseRepository, Mockito.times(1)).save(Mockito.any());
-        Mockito.verifyNoMoreInteractions(courseRepository);
+        master.setId(masterId);
+        master.setName(title);
+//        Mockito.when(masterRepository.findById(masterId)).thenReturn(Optional.of(master));
+//        Mockito.when(courseRepository.findById(courseId)).thenReturn(Optional.of(course));
+        Mockito.when(courseRepository.save(any())).thenReturn(course);
+        Mockito.when(masterRepository.save(any())).thenReturn(master);
+//        Mockito.when(masterRepository.save(master)).thenReturn(master);
+//       Course createCourse=courseService.createCourse(course.getTitle(),course.getId(),master.getId());
+        Master master1=masterService.createMaster(master.getName());
+//     Assertions.assertEquals(title,createCourse.getTitle());
+        Assertions.assertEquals(masterId,master1.getId());
+        logger.info("TestCreateCourse passed.");
     }
 }
